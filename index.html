@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+	<title>FEM | Results summary component</title>
+	<meta name="description" content="Responsive component using CSS grid, flex">
+	<!-- Open Graph / Facebook -->
+	<meta property="og:title" content="FEM | Results summary component">
+	<meta property="og:description" content="Responsive component using CSS grid, flex">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://nazhdaque.github.io/fem-results-summary-component/">
+	<meta property="og:image" content="./images/preview.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="FEM | Results summary component">
+	<meta name="twitter:description" content="Responsive component using CSS grid, flex">
+	<meta name="twitter:url" content="https://nazhdaque.github.io/fem-results-summary-component/">
+	<meta name="twitter:image" content="./images/preview.jpg">
+</head>
+
+<body class="grid-center">
+	<div class="results-summary-component">
+		<section class="results grid-center">
+			<h1 class="section-title">Your Result</h1>
+			<p class="result-score grid-center"><span>76</span> of 100</p>
+
+			<div>
+				<p class="result-rank">Great</p>
+				<p class="result-desc">You scored higher than 65% of the people who have taken these tests</p>
+			</div>
+		</section>
+
+		<section class="summary">
+			<h2 class="section-title">Summary</h2>
+
+			<div class="summary-items">
+				<div class="summary-item" data-item-color="color-1">
+					<div class="summary-item__caption-group">
+						<svg class="summary-item__icon">
+							<use href="/images/icons.svg#icon-reaction"></use>
+						</svg>
+						<h3 class="summary-item__title">Reaction</h3>
+					</div>
+
+					<p class="summary-item__score">
+						<span>80</span> / 100
+					</p>
+				</div>
+
+				<div class="summary-item" data-item-color="color-2">
+					<div class="summary-item__caption-group">
+						<svg class="summary-item__icon">
+							<use href="/images/icons.svg#icon-memory"></use>
+						</svg>
+						<h3 class="summary-item__title">Memory</h3>
+					</div>
+
+					<p class="summary-item__score">
+						<span>92</span> / 100
+					</p>
+				</div>
+
+				<div class="summary-item" data-item-color="color-3">
+					<div class="summary-item__caption-group">
+						<svg class="summary-item__icon">
+							<use href="/images/icons.svg#icon-verbal"></use>
+						</svg>
+						<h3 class="summary-item__title">Verbal</h3>
+					</div>
+
+					<p class="summary-item__score">
+						<span>61</span> / 100
+					</p>
+				</div>
+
+				<div class="summary-item" data-item-color="color-4">
+					<div class="summary-item__caption-group">
+						<svg class="summary-item__icon">
+							<use href="/images/icons.svg#icon-visual"></use>
+						</svg>
+						<h3 class="summary-item__title">Visual</h3>
+					</div>
+
+					<p class="summary-item__score">
+						<span>72</span> / 100
+					</p>
+				</div>
+			</div>
+
+			<button class="btn">Continue</button>
+		</section>
+	</div>
+	<script type="module" src="/main.js"></script>
+</body>
+
+</html>
