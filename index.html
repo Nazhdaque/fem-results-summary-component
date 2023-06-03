@@ -3,41 +3,59 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible"
+				content="IE=edge">
+	<meta name="viewport"
+				content="width=device-width, initial-scale=1.0">
 	<title>FEM | Results summary component</title>
-	<meta name="description" content="Responsive component using CSS grid, flex">
+	<meta name="description"
+				content="Responsive component using CSS grid, flex">
 	<!-- Open Graph / Facebook -->
-	<meta property="og:title" content="FEM | Results summary component">
-	<meta property="og:description" content="Responsive component using CSS grid, flex">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://nazhdaque.github.io/fem-results-summary-component/">
-	<meta property="og:image" content="./images/preview.jpg">
-	<meta property="og:image:width" content="1200">
-	<meta property="og:image:height" content="630">
+	<meta property="og:title"
+				content="FEM | Results summary component">
+	<meta property="og:description"
+				content="Responsive component using CSS grid, flex">
+	<meta property="og:type"
+				content="website">
+	<meta property="og:url"
+				content="https://nazhdaque.github.io/fem-results-summary-component/">
+	<meta property="og:image"
+				content="./images/preview.jpg">
+	<meta property="og:image:width"
+				content="1200">
+	<meta property="og:image:height"
+				content="630">
 	<!-- Twitter -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="FEM | Results summary component">
-	<meta name="twitter:description" content="Responsive component using CSS grid, flex">
-	<meta name="twitter:url" content="https://nazhdaque.github.io/fem-results-summary-component/">
-	<meta name="twitter:image" content="./images/preview.jpg">
-
-	<link rel="icon" type="image/png" sizes="32x32" href="/fem-results-summary-component/images/favicon-32x32.png">
-	
-  <script type="module" crossorigin src="/fem-results-summary-component/assets/index-8aeb9910.js"></script>
-  <link rel="stylesheet" href="/fem-results-summary-component/assets/index-e33835f2.css">
+	<meta name="twitter:card"
+				content="summary_large_image">
+	<meta name="twitter:title"
+				content="FEM | Results summary component">
+	<meta name="twitter:description"
+				content="Responsive component using CSS grid, flex">
+	<meta name="twitter:url"
+				content="https://nazhdaque.github.io/fem-results-summary-component/">
+	<meta name="twitter:image"
+				content="./images/preview.jpg">
+	<link rel="icon"
+				type="image/png"
+				sizes="32x32"
+				href="/fem-results-summary-component/images/favicon-32x32.png">
+  <script type="module" crossorigin src="/fem-results-summary-component/assets/index-0bf49982.js"></script>
+  <link rel="stylesheet" href="/fem-results-summary-component/assets/index-52e01cec.css">
 </head>
 
-<body class="grid-center">
+<body>
 	<main>
-		<div class="results-summary-component">
-			<section class="results grid-center">
+		<div class="results-summary-component col-2">
+			<section class="results">
 				<h1 class="section-title">Your Result</h1>
-				<p class="result-score grid-center"><span>76</span> of 100</p>
+				<p class="result-score grid-center"><span id="rating"></span> of 100</p>
 
 				<div>
-					<p class="result-rank">Great</p>
-					<p class="result-desc">You scored higher than 65% of the people who have taken these tests</p>
+					<p class="result-rank"
+						 id="rank"></p>
+					<p class="result-desc"
+						 id="desc"></p>
 				</div>
 			</section>
 
@@ -48,52 +66,52 @@
 					<div class="summary-item">
 						<div class="summary-item__caption-group">
 							<svg class="summary-item__icon">
-								<use href="/fem-results-summary-component/images/icons.svg#icon-reaction"></use>
+								<use href=""></use>
 							</svg>
-							<h3 class="summary-item__title">Reaction</h3>
+							<h3 class="summary-item__title"></h3>
 						</div>
 
 						<p class="summary-item__score">
-							<span>80</span> / 100
+							<span class="score"></span> / 100
 						</p>
 					</div>
 
 					<div class="summary-item">
 						<div class="summary-item__caption-group">
 							<svg class="summary-item__icon">
-								<use href="/fem-results-summary-component/images/icons.svg#icon-memory"></use>
+								<use href=""></use>
 							</svg>
-							<h3 class="summary-item__title">Memory</h3>
+							<h3 class="summary-item__title"></h3>
 						</div>
 
 						<p class="summary-item__score">
-							<span>92</span> / 100
+							<span class="score"></span> / 100
 						</p>
 					</div>
 
 					<div class="summary-item">
 						<div class="summary-item__caption-group">
 							<svg class="summary-item__icon">
-								<use href="/fem-results-summary-component/images/icons.svg#icon-verbal"></use>
+								<use href=""></use>
 							</svg>
-							<h3 class="summary-item__title">Verbal</h3>
+							<h3 class="summary-item__title"></h3>
 						</div>
 
 						<p class="summary-item__score">
-							<span>61</span> / 100
+							<span class="score"></span> / 100
 						</p>
 					</div>
 
 					<div class="summary-item">
 						<div class="summary-item__caption-group">
 							<svg class="summary-item__icon">
-								<use href="/fem-results-summary-component/images/icons.svg#icon-visual"></use>
+								<use href=""></use>
 							</svg>
-							<h3 class="summary-item__title">Visual</h3>
+							<h3 class="summary-item__title"></h3>
 						</div>
 
 						<p class="summary-item__score">
-							<span>72</span> / 100
+							<span class="score"></span> / 100
 						</p>
 					</div>
 				</div>
@@ -102,6 +120,7 @@
 			</section>
 		</div>
 	</main>
+
 	
 </body>
 
