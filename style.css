@@ -11,7 +11,7 @@
 	--cols-amount: 2;
 	--gaps-amount: calc(var(--cols-amount) - 1);
 	--shrink-ratio: 0.85;
-	--gap: 0rem; /* increase, if gaps needed; rem, px - some unit is required! doesn't work without it */
+	--gap: 0rem;
 	--col-x: repeat(
 		auto-fit,
 		minmax(

@@ -7,7 +7,7 @@ const icons = document.querySelectorAll(".summary-item__icon use");
 const result = document.querySelector("#rating");
 const rank = document.querySelector("#rank");
 const desc = document.querySelector("#desc");
-const basePath = "/images/icons.svg#icon-";
+const pathname = "images/icons.svg#icon-";
 const grades = {
 	terrible: "Most likely you are dying... or dishonestly answered questions",
 	bad: "Hope you get better",
@@ -15,7 +15,7 @@ const grades = {
 	normal: "Congratulations! You're normal",
 	great: "You scored higher than 65% of the people who have taken these tests",
 	impressive: "Are you a Ghostrunner?",
-	cheater: "Just sleight of hand and no cheating, right?",
+	cheater: "Well, how did it happen, may I ask?",
 };
 
 const capitalize = word =>
@@ -26,6 +26,8 @@ const getRankData = index => {
 	rank.textContent = capitalize(grade);
 	desc.textContent = grades[grade];
 };
+
+const getIconURL = endpoint => window.location.href + pathname + endpoint;
 
 const getRank = rating => {
 	if (rating <= 10) {
@@ -62,13 +64,13 @@ class GetRating {
 		// The calculated result 401.3157894736842 depends on the value of the score sum,
 		// but in real life 100% is a known fixed value.
 		// Now we know it and can use it to receive dynamically calculated rating values
-		// depending on the data received from the API, so
+		// depending on the data received from the API, so let
 		this.maxValue = 401.3;
-		return this; // allow method chaining
+		return this;
 	};
 	getRoundedTo10 = () => {
 		this.percent = Math.round(this.maxValue / 10) * 10;
-		return this; // allow method chaining
+		return this;
 	};
 	getRoundedPercent = () => Math.round((this.scoreSum * 100) / this.percent);
 }
@@ -80,10 +82,9 @@ API.get("data.json").then(data => {
 	const failsPercent = 100 / data.length;
 
 	data.forEach((item, index) => {
-		icons[index].setAttribute(
-			"href",
-			`${basePath + item.category.toLowerCase()}`
-		);
+		const endpoint = item.category.toLowerCase();
+		const iconURL = getIconURL(endpoint);
+		icons[index].setAttribute("href", `${iconURL}`);
 		titles[index].textContent = item.category;
 		scores[index].textContent = item.score;
 		sum += Number.parseInt(item.score, 10);
