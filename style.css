@@ -33,10 +33,10 @@
 	--clr-p-400-alpha: 0, 100%, 67%;
 	--clr-p-500-solid: hsl(39, 100%, 56%);
 	--clr-p-500-alpha: 39, 100%, 56%;
-	--clr-p-700-solid: hsl(166, 100%, 37%);
-	--clr-p-700-alpha: 166, 100%, 37%;
 	--clr-p-600-solid: hsl(234, 85%, 45%);
 	--clr-p-600-alpha: 234, 85%, 45%;
+	--clr-p-700-solid: hsl(166, 100%, 37%);
+	--clr-p-700-alpha: 166, 100%, 37%;
 
 	--clr-n-100-solid: hsl(0, 0%, 100%, 1);
 	--clr-n-100-alpha: 0, 0%, 100%;
@@ -45,7 +45,13 @@
 	--clr-n-800-solid: hsl(224, 30%, 27%, 1);
 	--clr-n-800-alpha: 224, 30%, 27%;
 
-	--gradient-bg: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+	--clr-g-400-solid: hsl(252, 100%, 67%);
+	--clr-g-500-solid: hsl(241, 81%, 54%);
+
+	--gradient-bg: linear-gradient(
+		var(--clr-g-400-solid),
+		var(--clr-g-500-solid)
+	);
 	--gradient-circle: linear-gradient(hsl(256, 72%, 46%), hsl(241, 72%, 46%, 0));
 
 	/* typography */
@@ -218,20 +224,29 @@ main {
 }
 
 .btn {
+	--btn-bg: linear-gradient(
+		to top,
+		var(--clr-g-500-solid) 0%,
+		var(--clr-g-400-solid) 50%,
+		var(--clr-n-800-solid) 50%,
+		var(--clr-n-800-solid) 100%
+	);
+
 	color: var(--clr-n-100-solid);
-	background: var(--clr-n-800-solid);
+	background: var(--btn-bg);
 	line-height: 1;
 	padding: 1rem 2rem;
 	border: 0;
 	border-radius: 100vw;
 	cursor: pointer;
+	outline: none;
+	background-size: auto 200%;
+	transition: background-position 0.1s ease-in;
 }
 
 .btn:hover,
 .btn:focus-visible {
-	background: var(--gradient-bg);
-	outline: 1px solid var(--clr-gradient-3-solid);
-	outline-offset: -1px;
+	background-position: bottom center;
 }
 
 @media (max-width: 625px) {
