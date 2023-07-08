@@ -29,41 +29,24 @@
 	);
 
 	/* colors */
-	--clr-primary-1-solid: hsl(0, 100%, 67%);
-	--clr-primary-2-solid: hsl(39, 100%, 56%);
-	--clr-primary-3-solid: hsl(166, 100%, 37%);
-	--clr-primary-4-solid: hsl(234, 85%, 45%);
-	--clr-primary-1-alpha: 0, 100%, 67%;
-	--clr-primary-2-alpha: 39, 100%, 56%;
-	--clr-primary-3-alpha: 166, 100%, 37%;
-	--clr-primary-4-alpha: 234, 85%, 45%;
+	--clr-p-400-solid: hsl(0, 100%, 67%);
+	--clr-p-400-alpha: 0, 100%, 67%;
+	--clr-p-500-solid: hsl(39, 100%, 56%);
+	--clr-p-500-alpha: 39, 100%, 56%;
+	--clr-p-700-solid: hsl(166, 100%, 37%);
+	--clr-p-700-alpha: 166, 100%, 37%;
+	--clr-p-600-solid: hsl(234, 85%, 45%);
+	--clr-p-600-alpha: 234, 85%, 45%;
 
-	--clr-gradient-1-solid: hsl(252, 100%, 67%);
-	--clr-gradient-2-solid: hsl(241, 81%, 54%);
-	--clr-gradient-3-solid: hsl(256, 72%, 46%);
-	--clr-gradient-4-solid: hsl(241, 72%, 46%, 0);
-	--clr-gradient-1-alpha: 252, 100%, 67%;
-	--clr-gradient-2-alpha: 241, 81%, 54%;
-	--clr-gradient-3-alpha: 256, 72%, 46%;
-	--clr-gradient-4-alpha: 241, 72%, 46%;
+	--clr-n-100-solid: hsl(0, 0%, 100%, 1);
+	--clr-n-100-alpha: 0, 0%, 100%;
+	/* --clr-n-200-solid: hsl(221, 100%, 96%, 1);
+	--clr-n-300-solid: hsl(241, 100%, 89%, 1); */
+	--clr-n-800-solid: hsl(224, 30%, 27%, 1);
+	--clr-n-800-alpha: 224, 30%, 27%;
 
-	--clr-neutral-1-solid: hsl(0, 0%, 100%, 1);
-	--clr-neutral-2-solid: hsl(221, 100%, 96%, 1);
-	--clr-neutral-3-solid: hsl(241, 100%, 89%, 1);
-	--clr-neutral-4-solid: hsl(224, 30%, 27%, 1);
-	--clr-neutral-1-alpha: 0, 0%, 100%;
-	--clr-neutral-2-alpha: 221, 100%, 96%;
-	--clr-neutral-3-alpha: 241, 100%, 89%;
-	--clr-neutral-4-alpha: 224, 30%, 27%;
-
-	--gradient-bg: linear-gradient(
-		var(--clr-gradient-1-solid),
-		var(--clr-gradient-2-solid)
-	);
-	--gradient-circle: linear-gradient(
-		var(--clr-gradient-3-solid),
-		var(--clr-gradient-4-solid)
-	);
+	--gradient-bg: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+	--gradient-circle: linear-gradient(hsl(256, 72%, 46%), hsl(241, 72%, 46%, 0));
 
 	/* typography */
 	--ff-primary: "HankenGrotesk", sans-serif;
@@ -99,7 +82,7 @@ ul {
 body {
 	font-family: var(--ff-primary);
 	font-size: var(--fs-md);
-	color: var(--clr-neutral-4-solid);
+	color: var(--clr-n-800-solid);
 	display: grid;
 	place-items: center;
 	min-height: 100vh;
@@ -118,7 +101,7 @@ main {
 	--border-radius-desktop: var(--base-border-radius);
 	--border-radius-mobile: 0 0 var(--base-border-radius)
 		var(--base-border-radius);
-	--box-shadow: 0.5rem 1rem 3rem hsl(var(--clr-neutral-4-alpha), 0.2);
+	--box-shadow: 0.5rem 1rem 3rem hsl(var(--clr-p-600-alpha), 0.15);
 
 	width: min(46rem, 100%);
 	display: grid;
@@ -139,7 +122,7 @@ main {
 .results {
 	text-align: center;
 	gap: 2rem;
-	color: hsl(var(--clr-neutral-1-alpha), 0.7);
+	color: hsl(var(--clr-n-100-alpha), 0.7);
 	background: var(--gradient-bg);
 	border-radius: var(--border-radius-desktop);
 	display: grid;
@@ -158,11 +141,11 @@ main {
 	font-size: var(--fs-2xl);
 	font-weight: var(--fw-black);
 	line-height: 1;
-	color: var(--clr-neutral-1-solid);
+	color: var(--clr-n-100-solid);
 }
 
 .result-rank {
-	color: var(--clr-neutral-1-solid);
+	color: var(--clr-n-100-solid);
 	font-size: var(--fs-xl);
 	font-weight: var(--fw-bold);
 	margin-bottom: 1rem;
@@ -193,16 +176,16 @@ main {
 }
 
 .summary-item:nth-child(1) {
-	--item-color: var(--clr-primary-1-alpha);
+	--item-color: var(--clr-p-400-alpha);
 }
 .summary-item:nth-child(2) {
-	--item-color: var(--clr-primary-2-alpha);
+	--item-color: var(--clr-p-500-alpha);
 }
 .summary-item:nth-child(3) {
-	--item-color: var(--clr-primary-3-alpha);
+	--item-color: var(--clr-p-700-alpha);
 }
 .summary-item:nth-child(4) {
-	--item-color: var(--clr-primary-4-alpha);
+	--item-color: var(--clr-p-600-alpha);
 }
 
 .summary-item__caption-group {
@@ -224,19 +207,19 @@ main {
 }
 
 .summary-item__score {
-	color: hsl(var(--clr-neutral-4-alpha), 0.5);
+	color: hsl(var(--clr-n-800-alpha), 0.5);
 	font-weight: var(--fw-black);
 	min-width: max-content;
 }
 
 .summary-item__score span {
-	color: var(--clr-neutral-4-solid);
+	color: var(--clr-n-800-solid);
 	margin-right: 0.15rem;
 }
 
 .btn {
-	color: var(--clr-neutral-1-solid);
-	background: var(--clr-neutral-4-solid);
+	color: var(--clr-n-100-solid);
+	background: var(--clr-n-800-solid);
 	line-height: 1;
 	padding: 1rem 2rem;
 	border: 0;
